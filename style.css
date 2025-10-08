@@ -1,114 +1,211 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Alap stílusok */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F8F8F8; /* világos szürke háttér */
+    color: #111111; /* sötét fekete szöveg */
+    margin: 0;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 header {
-    background-color: #0066cc;
+    background-color: #111111; /* fekete fejléc */
     color: white;
-    padding: 20px 0;
+    padding: 25px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 header h1 {
     text-align: center;
+    margin: 0;
+    font-size: 2.2em;
 }
 
 header nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 15px 0 0 0;
+    margin: 0;
 }
 
 header nav ul li {
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
 header nav ul li a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: #EEEEEE; /* világosabb szürke link */
+    font-weight: 600;
+    font-size: 1em;
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #ffcc00;
+    color: #FFFFFF; /* fehér hover */
 }
 
-
-.section {
-    padding: 40px 0;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-
+/* Kártyák */
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 25px;
+    margin: 40px 0;
 }
 
 .card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    width: 280px;
-    text-align: center;
+    background-color: #FFFFFF; /* fehér kártya */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: calc(33% - 25px);
+    min-width: 250px;
     overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
 }
 
 .card h3 {
     margin: 15px 0;
-    color: #0066cc;
+    color: #111111; /* fekete cím */
 }
 
 .card p {
     padding: 0 15px 20px;
-    color: #555;
+    color: #333333; /* sötétebb szürke szöveg */
+    font-size: 0.95em;
 }
 
-
-ul {
-    list-style-type: none;
-    padding: 0;
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease forwards;
 }
 
-ul li {
-    padding: 10px;
-    font-size: 1.1em;
-}
-
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
+.modal-content {
+    background-color: #FFFFFF;
+    padding: 35px 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 700px;
     text-align: center;
+    position: relative;
+    transform: scale(0.8);
+    animation: popIn 0.3s ease forwards;
 }
 
+#modal-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #111111; /* fekete modal cím */
+}
+
+#modal-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+#modal-description {
+    color: #333333;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2em;
+    color: #111111;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #555555;
+}
+
+/* Animációk */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Benefits */
+.section {
+    padding: 50px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #111111; /* fekete szekció cím */
+}
+
+.section ul {
+    list-style-type: disc;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 20px;
+    color: #333333;
+    font-size: 1.05em;
+}
+
+/* Footer */
+footer {
+    background-color: #111111; /* fekete footer */
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .card {
+        width: calc(45% - 25px);
+    }
+}
 
 @media (max-width: 768px) {
     header nav ul {
@@ -118,5 +215,9 @@ footer {
     .cards {
         flex-direction: column;
         align-items: center;
+    }
+
+    .card {
+        width: 90%;
     }
 }

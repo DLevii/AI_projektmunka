@@ -1,100 +1,87 @@
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mesterséges Intelligencia Bemutatása</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mesterséges Intelligencia Bemutatása</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Mesterséges Intelligencia (AI) Bemutatása</h1>
-            <nav>
-                <ul>
-                    <li><a href="#ai-applications">AI alkalmazások</a></li>
-                    <li><a href="#benefits">Előnyök</a></li>
-                    <li><a href="#contact">Kapcsolat</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
- 
-    <section id="ai-applications" class="section">
-        <div class="container">
-            <h2>A mesterséges intelligencia alkalmazásai</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="chatgpt.png" alt="">
-                    <h3>ChatGPT</h3>
-                    <p>A ChatGPT egy nagy nyelvi modell (LLM), amely az OpenAI fejlesztése.
-                        Képes természetes nyelvű párbeszédre, szövegírásra, fordításra, kérdésmegértésre és még sok másra.
-                        Az AI GPT-4 alapokon működik, és több milliárd szavas szövegkorpusz alapján tanult.
-                        Számos területen hasznosítható: oktatás, ügyfélszolgálat, kreatív írás stb.
-                        Folyamatosan fejlődik és adaptálható specifikus felhasználásokhoz.</p>
-                </div>
-                <div class="card">
-                    <img src="" alt="">
-                    <h3>Tesla Autopilot</h3>
-                    <p>A Tesla Autopilot egy fejlett vezetéstámogató rendszer, amely mesterséges intelligenciát használ a járművek részleges önvezetéséhez.
-                        Képes önállóan kormányozni, gyorsítani és fékezni bizonyos körülmények között.
-                        Folyamatosan tanul a valós forgalmi adatokból és OTA (over-the-air) frissítéseken keresztül fejlődik.
-                        A cél a teljes önvezetés elérése (Full Self-Driving – FSD), de jelenleg emberi felügyelet szükséges.
-                        A rendszer neurális hálózatokra és kamerákra épül, nem lidar-alapú.</p>
-                </div>
-                <div class="card">
-                    <img src="" alt="">
-                    <h3>Amazon Robotics</h3>
-                    <p>Az Amazon Robotics mesterséges intelligenciával vezérelt robotrendszereket fejleszt a logisztikai központok számára.
-                        Robotjai automatizálják a termékek szortírozását, mozgatását és csomagolását.
-                        A cél a hatékonyság növelése és az emberi munkaerő támogatása, nem teljes kiváltása.
-                        AI-t használnak az útvonaltervezésre, tárgyfelismerésre és koordinációra.
-                        Ez a rendszer kulcsszerepet játszik az Amazon gyors szállítási szolgáltatásaiban.</p>
-                </div>
-                <div class="card">
-                    <img src="" alt="">
-                    <h3>Deepmind Alphastar</h3>
-                    <p>Az AlphaStar a DeepMind által fejlesztett AI, amely a StarCraft II valós idejű stratégiai játékban versenyez.
-                        A rendszer mély megerősítéses tanulással tanulta meg a játékot, emberi szintű teljesítményt elérve.
-                        Több AI "ügynök" párhuzamos tanulásával fejlődött, emberi játékosok stílusait is utánzó módon.
-                        Az AlphaStar megmutatta, hogy az AI képes összetett, dinamikus döntéseket hozni.
-                        Ez áttörést jelentett a stratégiai gondolkodás modellezésében gépi tanulással.</p>
-                </div>
-                <div class="card">
-                    <img src="Kép.png" alt="">
-                    <h3>PathAI</h3>
-                    <p>A PathAI egy egészségügyi startup, amely mesterséges intelligenciát alkalmaz patológiai képelemzésre.
-                        Célja a betegségek – például rák – pontosabb és gyorsabb diagnosztizálása digitális képek alapján.
-                        AI-modelljei tanított képek millióin keresztül tanulják meg felismerni a kóros elváltozásokat.
-                        Segíti a patológusokat döntéshozatalban, és javíthatja a kezelés hatékonyságát.
-                        A klinikai kutatásokban és gyógyszerfejlesztésben is egyre szélesebb körben használják.</p>
-                </div>
+<header>
+    <div class="container">
+        <h1>Mesterséges Intelligencia (AI) Bemutatása</h1>
+        <nav>
+            <ul>
+                <li><a href="#ai-applications">AI alkalmazások</a></li>
+                <li><a href="#benefits">Előnyök</a></li>
+                <li><a href="#contact">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="ai-applications" class="section">
+    <div class="container">
+        <h2>A mesterséges intelligencia alkalmazásai</h2>
+        <div class="cards">
+            <div class="card" data-card="chatgpt">
+                <img src="img/chatgbt.png" alt="ChatGPT">
+                <h3>ChatGPT</h3>
+                <p>Az OpenAI GPT-4 alapú nyelvi modellje, amely természetes nyelven kommunikál, ír, fordít és testreszabható.</p>
+            </div>
+            <div class="card" data-card="tesla">
+                <img src="img/tesla.png" alt="Tesla Autopilot">
+                <h3>Tesla Autopilot</h3>
+                <p>Fejlett vezetéstámogató rendszer, részleges önvezetéshez. Képes kormányozni, gyorsítani és fékezni bizonyos helyzetekben.</p>
+            </div>
+            <div class="card" data-card="amazon">
+                <img src="img/amazon.webp" alt="Amazon Robotics">
+                <h3>Amazon Robotics</h3>
+                <p>AI-vezérelt robotok, amelyek automatizálják az Amazon raktáraiban a szortírozást és csomagolást.</p>
+            </div>
+            <div class="card" data-card="alphastar">
+                <img src="img/deepmind.png" alt="DeepMind AlphaStar">
+                <h3>DeepMind AlphaStar</h3>
+                <p>AI, amely mély megerősítéses tanulással tanulta meg a StarCraft II-t, emberi szinten játszik.</p>
+            </div>
+            <div class="card" data-card="pathai">
+                <img src="img/path.webp" alt="PathAI">
+                <h3>PathAI</h3>
+                <p>AI-alapú egészségügyi rendszer, amely patológiai képeket elemez a pontosabb diagnózis érdekében.</p>
             </div>
         </div>
-    </section>
- 
-    <section id="benefits" class="section">
-        <div class="container">
-            <h2>Miért érdemes AI-t használni?</h2>
-            <ul>
-                <li>Automatizálás: Feladatok gyorsabb és hatékonyabb elvégzése.</li>
-                <li>Adatfeldolgozás: Nagy mennyiségű adat gyors elemzése és értelmezése.</li>
-                <li>Pontos döntéshozatal: A mesterséges intelligencia segíthet a legjobb döntések meghozatalában.</li>
-                <li>Innováció: Új termékek és szolgáltatások fejlesztésére ad lehetőséget.</li>
-            </ul>
-        </div>
-    </section>
- 
-    <footer id="contact">
-        <div class="container">
-            <p>&copy; 2025 AI Bemutató. Minden jog fenntartva.</p>
-            <p>Készitette:Rosta László, Dudás Levente, Vajvoda Mózes</p>
-        </div>
-    </footer>
- 
-    <script src="script.js"></script>
+    </div>
+</section>
+
+<section id="benefits" class="section">
+    <div class="container">
+        <h2>Miért érdemes AI-t használni?</h2>
+        <ul>
+            <li>Automatizálás: Feladatok gyorsabb és hatékonyabb elvégzése.</li>
+            <li>Adatfeldolgozás: Nagy mennyiségű adat gyors elemzése és értelmezése.</li>
+            <li>Pontos döntéshozatal: A mesterséges intelligencia segíthet a legjobb döntések meghozatalában.</li>
+            <li>Innováció: Új termékek és szolgáltatások fejlesztésére ad lehetőséget.</li>
+        </ul>
+    </div>
+</section>
+
+<footer id="contact">
+    <div class="container">
+        <p>&copy; 2025 AI Bemutató. Minden jog fenntartva.</p>
+        <p>Készítette: Rosta László, Dudás Levente, Vajvoda Mózes</p>
+    </div>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3 id="modal-title">AI Név</h3>
+        <img id="modal-image" src="" alt="AI Logo">
+        <p id="modal-description">Részletes információk az AI-ról...</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
-

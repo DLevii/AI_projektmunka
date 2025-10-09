@@ -1,4 +1,4 @@
-/* Alap stílusok */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #F8F8F8; /* világos szürke háttér */
@@ -49,7 +49,7 @@ header nav ul li a:hover {
     color: #FFFFFF; /* fehér hover */
 }
 
-/* Kártyák */
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +97,7 @@ header nav ul li a:hover {
     font-size: 0.95em;
 }
 
-/* Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -159,7 +159,7 @@ header nav ul li a:hover {
     color: #555555;
 }
 
-/* Animációk */
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -170,7 +170,7 @@ header nav ul li a:hover {
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Benefits */
+
 .section {
     padding: 50px 0;
 }
@@ -191,7 +191,7 @@ header nav ul li a:hover {
     font-size: 1.05em;
 }
 
-/* Footer */
+
 footer {
     background-color: #111111; /* fekete footer */
     color: white;
@@ -200,7 +200,7 @@ footer {
     margin-top: 50px;
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
     .card {
         width: calc(45% - 25px);
@@ -221,3 +221,4 @@ footer {
         width: 90%;
     }
 }
+

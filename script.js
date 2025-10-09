@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDescription = document.getElementById('modal-description');
     const container = document.querySelector('.cards');
 
-    // Javított, teljes data objektum
+  
     const data = {
         chatgpt: {
             title: "ChatGPT",
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Kártyákra kattintás
+    
     container.addEventListener('click', (e) => {
         const card = e.target.closest('.card');
         if (!card) return;
@@ -56,15 +56,16 @@ document.addEventListener('DOMContentLoaded', () => {
         img.src = cardData.image;
     });
 
-    // Modal bezárása
+    
     closeBtn.addEventListener('click', () => {
         modal.style.display = "none";
     });
 
-    // Modal háttérre kattintás
+   
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.style.display = "none";
         }
     });
 })
+
